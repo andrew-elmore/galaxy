@@ -74,8 +74,8 @@ class Culture:
         return (self.inhabited_stars)
 
     def takeAction(self, year, stars, duration):
-        gatherResources(year, duration)
-        colonizeStars(year, stars)
+        self.gatherResources(year, duration)
+        self.colonizeStars(year, stars)
 
     def gatherResources(self, year, duration):
         gain = 0

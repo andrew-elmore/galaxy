@@ -9,16 +9,6 @@ from cultures import Culture
 import cv2
 from datetime import datetime
 
-
-
-
-
-
-
-
-
-
-
 class Galaxy:
     def __init__(self, num_stars, num_cultures, img, scale, radius):
         self.scale = scale
@@ -36,8 +26,7 @@ class Galaxy:
         duration = 1
         self.year += duration
         for culture in self.cultures:
-            culture.gatherResources(self.year, duration)
-            culture.colonizeStars(self.year, self.stars)
+            culture.takeAction(self.year, self.stars, duration)
 
     def paintGalaxy(self):
         for culture in self.cultures:
